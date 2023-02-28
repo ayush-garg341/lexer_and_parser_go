@@ -60,7 +60,7 @@ func (s *Scanner) Scan() (tok tokens.Token, lit string) {
 	case ',':
 		return tokens.COMMA, string(ch)
 	}
-	return tokens.ILLEGAL, ""
+	return tokens.ILLEGAL, string(ch)
 }
 
 // scanWhitespace consumes the current rune and all contiguous whitespace.
